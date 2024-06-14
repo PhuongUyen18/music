@@ -1,0 +1,691 @@
+/* styling the scroll bar */
+::-webkit-scrollbar {
+    width: 3.5px;
+}
+
+::-webkit-scrollbar-track {
+    background: inherit;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #f6f6f6;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* css for every element  */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+}
+
+a{
+    color: white;
+}
+
+
+/* container that contains all the contents */
+.container {
+    width: 100%;
+    height: 100vh;
+    background-color: #0B0A0B;
+    display: flex;
+    
+}
+
+/* styling for the sidebar */
+.sidebar {
+    width: 16%;
+    height: 100%;
+    background-color: #1C1C1E;
+    color: white;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sidebar-contents{
+    width: 96%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sidebar h1{
+    font-size: 40px;
+}
+
+.sidebar{
+    font-size: 20px;
+}
+
+@media (max-width: 1280px) {
+    .sidebar {
+       font-size: 18px;
+    }
+
+    .sidebar h1{
+        font-size: 38px;
+    }
+}
+
+.nav-section-members{
+    cursor: pointer;
+    margin: 0.8rem 0;
+}
+
+.sidebar i{
+    margin-right: 1.2rem;
+}
+
+.library-section{
+    width: 100%;
+}
+
+#playlistCollection{
+    width: 110%;
+    height: 43vh;
+    overflow-y: auto; /* make the table scrollable */
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    margin-top: 0.8rem;
+}
+
+#playlistCollection::-webkit-scrollbar-thumb {
+    background: inherit; /* Black color for the scrollbar thumb */
+    border-radius: 5px;
+}
+
+#new-playlist{
+    cursor: pointer;
+}
+
+
+.library-section .playlist-members{
+    margin-top: 0.2rem;
+    margin-left: 2.3rem;
+    margin-bottom: 1rem;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.playlist-members i {
+    margin-right: -0.1px;
+    visibility: hidden;
+}
+
+.playlist-members:hover i {
+    transition: 300ms ease-in-out;
+    visibility: visible;
+}
+
+tr{
+    transition: 300ms ease-in-out;
+}
+
+/* set effects when hovering an icon */
+.fa-trash:hover{
+    transition: 300ms ease-in-out;
+    color: #de1d1d;
+}
+
+.fa-heart:hover{
+    transition: 300ms ease-in-out;
+    transform: scale(1.2);
+}
+
+.fa-square-plus:hover{
+    transition: 300ms ease-in-out;
+    font-weight: bolder;
+    transform: scale(1.2);
+}
+
+td .fa-trash:hover{
+    transform: scale(1.2);
+}
+
+
+
+
+
+.library-section h2{
+    margin-bottom: 1rem;
+}
+
+/* styling the main contents page */
+.contents {
+    width: 84%;
+    height: 100%;
+    position: relative;
+}
+
+/* similar styling for the elements of contents div */
+.topbar,
+.main-content,
+.music-player {
+    width: 92%;
+    margin: auto;
+
+}
+
+/* styling for the topbar */
+.topbar {
+    height: 12vh;
+    color: white;
+    line-height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* styling for profile of profile pic */
+.topbar .profile {
+    width: 3rem;
+    height: 3rem;
+    background-color: #1C1C1E;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+}
+
+
+.topbar .profile img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.top-right-bar{
+    display: flex;
+    align-items: center;
+}
+
+/* styling the search bar */
+.search-bar {
+    background-color: white;
+    border: 2px solid #ccc;
+    border-radius: 20px; /* Adjust the border-radius to control the oval shape */
+    height: 5vh;
+    width: 22rem;
+    display: flex;
+    align-items: center;
+    margin-left: 2.3rem;
+  }
+
+  
+
+.search-bar input{
+    width: 92%;
+    height: 100%;
+    border-radius: 20px;
+    padding-left: 15px;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+}
+
+
+
+/* styling the main content container */
+.content-part{
+    height: 73vh;
+    overflow-y: auto; /* make the table scrollable */
+    scroll-behavior: smooth;
+}
+
+.content-header{
+    width: 100%;
+    padding: 25px;
+    background-color: #000000;
+    position: sticky; /* make the table heads sticky */
+    top: 0px;
+}
+
+/* styling the home contents */
+.home-content-box{
+    margin-top: 0.5rem;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.box-content{
+    width: 16.5rem;
+    height: 17.5rem;
+    margin:  0.8rem;
+    background-color: #1C1C1E;
+    padding: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+    font-size: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
+}
+
+/* styling the edit profile page */
+.edit_profile-form{
+    width: 100%;
+    font-size: 22px;
+    background-color: black;
+    padding: 0 25px;
+}
+
+.edit_profile-form-part,.edit_profile-img-part{
+    width: 60%;
+    margin-bottom: 1.5vh;
+}
+
+.edit_profile-img-part{
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    background-color: #1C1C1E;
+    border-radius: 10px;
+    padding: 0 10px;
+}
+
+.edit_profile-img-part label{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 98%;
+}
+
+.edit_profile-img-btn{
+    width: 10rem;
+    height: 5vh;
+    font-size: 15px;
+    background-color: #284edb;
+    text-align: center;
+    line-height: 5vh;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.edit_profile-img-btn:hover{
+    background-color: #0c38d6;
+    transition: 300ms ease-in-out;
+}
+
+.edit_profile-form-part input,.edit_profile-form-part select{
+    width: 100%;
+    height: 4.5vh;
+    border-radius: 8px;
+    padding: 8px;
+    font-size: 16px;
+    margin: 0.5rem 0 1rem 0;
+    background-color: #000000;
+    outline: none;
+    border: none;
+    border: 0.5px solid gray;
+    color: white;
+}
+
+.edit_profile-form-part input:focus{
+    border-color: white;
+    transition: 300ms ease-in-out;
+}
+
+.edit_profile-form-part button{
+    width: 10vw;
+    height: 4vh;
+    cursor: pointer;
+    padding: 5px;
+    font-weight: bold;
+    border-radius: 8px;
+    background-color: #284edb;
+    border: 1px solid #284edb;
+    color: white;
+}
+
+.edit_profile-form-part button:hover{
+    background-color: #0c38d6;
+    border: 1px solid #0c38d6;
+    transition: 300ms ease-in-out;
+}
+
+
+
+.edit_profile-img{
+    width: 4rem;
+    height: 4rem;
+    /* z-index: 3; */
+    /* transform: translateY(-20%); */
+    cursor: pointer;
+    position: relative;
+} 
+
+.edit_profile-img img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    transition: 300ms ease-in-out;
+}
+
+.edit_profile-img i{
+    transition: 300ms ease-in-out;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: none;
+}
+
+.edit_profile-img:hover img{
+    filter: brightness(70%);
+}
+
+.edit_profile-img:hover i{
+    display: block;
+}
+
+.premium-btn{
+    padding: 10px;
+    background-color: #284edb;
+    color: white;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+}
+
+.premium-btn:hover{
+    background-color: #0c38d6;
+    color: white;
+}
+
+/* styling the genre box */
+.genre-box .box-content{
+    position: relative;
+    font-weight: bold;
+}
+
+.genre-box .box-content div{
+    width: 100%;
+    padding: 10px;   
+}
+
+.genre-box .box-content img{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 10rem;
+    height: 10rem;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    transform: rotate(25deg);
+}
+
+
+/* styling the artist box */
+.artist-box .box-content{
+    display: grid;
+    place-items: center;
+    padding: 3px;
+}
+
+.artist-box .box-content img{
+    width: 12rem;
+    height: 12rem;
+    border-radius: 50%;
+}
+
+/* styling the table  */
+table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  th, td {
+    padding: 20px; 
+  }
+
+  tr{
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+
+  tr:hover{
+    transition: 300ms ease-in-out;
+    background-color: #161618;
+  }
+
+  th{
+    position: sticky; /* make the table heads sticky */
+    top: 0px;
+    background-color: #000000;
+  }
+
+  td{
+    cursor: pointer;
+  }
+
+/* styling the header of your songs section*/
+#your_songs-header{
+    display: flex;
+    justify-content: space-between;
+}
+
+button{
+    cursor: pointer;
+}
+
+#your_songs-header .uploadBtn{
+    cursor: pointer;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: #f6f6f6;
+    color: #1C1C1E;
+    display: grid;
+    place-items: center;
+    border-radius: 5px;
+    font-size: larger;
+    transition: 300ms ease-in-out;
+}
+
+#your_songs-header .uploadBtn:hover{
+    background-color: #284edb;
+    color: white;
+  
+}
+
+
+/* styling the bottombar which contains the music player */
+.bottombar {
+    width: 100%;
+    height: 15vh;
+    background-color: #000000;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: white;
+    display: grid;
+    align-items: center;
+}
+
+/* styling for the music player */
+.music-player {
+    /* background-color: gray; */
+    height: 48%;
+    display: flex;
+
+}
+
+.music-player-contents,
+.music-player-controls,
+.music-player-slider {
+    width: 33.33%;
+    height: 100%;
+    /* background-color: red; */
+}
+
+.music-player-contents {
+    display: flex;
+    align-items: center;
+}
+
+.music-player-song-photo {
+    width: 13%;
+    height: 90%;
+    background-color: white;
+    border-radius: 5px;
+}
+
+@media (max-width: 1280px) {
+    .music-player-song-photo {
+        width: 15%;
+        height: 85%;
+    }
+}
+
+
+.music-player-song-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    border-radius: 5px;
+    display: none;
+}
+
+.music-player-controls {
+    width: 40%;
+    height: 100%;
+
+}
+
+.music-player-song-detail {
+    width: fit-content;
+    margin-left: 0.5rem;
+}
+
+.music_controls {
+    width: 100%;
+    margin-top: 0.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.music_controls i {
+    display: flex;
+    font-size: 18px;
+    color: white;
+    margin: 0 0.5rem;
+    cursor: pointer;
+}
+
+#music-player-download-btn{
+    margin-right: 1.5rem;
+}
+
+.main_button {
+    width: 2.3rem;
+    height: 2.3rem;
+    border: 1px solid black;
+    border-radius: 50%;
+    background-color: #f6f6f6;
+    color: #0B0A0B;
+    font-size: 1.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* styling the progress bar */
+.music-player-progressBar {
+    width: 100%;
+    height: 21%;
+    font-size: 13px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.music-player-progress-main-bar {
+    width: 95%;
+    height: 0.2rem;
+    background-color: aliceblue;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07), 0 2px 4px rgba(0, 0, 0, 0.07),
+        0 4px 8px rgba(0, 0, 0, 0.07), 0 8px 16px rgba(0, 0, 0, 0.07),
+        0 16px 32px rgba(0, 0, 0, 0.07), 0 32px 64px rgba(0, 0, 0, 0.07);
+    border-radius: 4rem;
+    margin: 0 0.4rem;
+    position: relative;
+    transition: all 1s linear;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+.progress {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: #284edb;
+    border-radius: 4rem;
+
+    transition: all 1s linear;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+.progress:hover {
+    background-color: #284edb;
+    transition: .2s;
+}
+
+/* styling the volume bar */
+.music-player-slider {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+#volume-container {
+    display: flex;
+    align-items: center;
+    width: 40%;
+}
+
+#volume-slider {
+    width: 90%;
+    height: 4px;
+}
+
+#volume-container i {
+    margin-right: 0.5rem;
+}
+
+/* styling the error msg  */
+#error-msg{
+    padding: 25px;
+    font-size: 22px;
+    text-align: center;
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: 5vh;
+}
+
+
+
+
